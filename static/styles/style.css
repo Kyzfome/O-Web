@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  background-color: cornsilk;
+}
+
+.main-theam {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  height: 100vh;
+}
+
+.menu-theam {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  background-image: url("../images/menu-background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: relative;
+  height: 35vh;
+}
+
+.menu-main-text {
+  color: white;
+  text-align: center;
+  margin-top: 8vw;
+  font-size: 30px;
+}
+
+.show-menu-text {
+  margin-top: 5vw;
+  text-align: center;
+  font-size: 30px;
+}
+
+.second-theam {
+  height: 80vh;
+}
+
+.second-food-container {
+  background-color: rgba(0, 0, 0, 0.32);
+  max-width: 1650px;
+  border-radius: 2%;
+  margin: 0 auto;
+}
+
+.second-main {
+  color: white;
+  position: relative;
+  margin-top: 4vw;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Times New Roman", Times, serif;
+}
+.under-second {
+  color: white;
+  position: relative;
+  font-size: 2vw;
+  text-align: center;
+}
+.second-main > .p {
+  color: white;
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: right;
+}
+
+.nav-bar > ul {
+  margin-right: 5vw;
+}
+
+.nav-bar > ul > a {
+  font-size: 25px;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.food {
+  display: inline-block;
+  text-align: center;
+  margin-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.food-index {
+  display: flex;
+  text-align: center;
+  margin-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.main-text {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  text-align: right;
+  margin-top: 4vw;
+  margin-right: 25px;
+}
+
+.food-container {
+  display: inline-block;
+  margin: 20px;
+}
+
+.menu-container {
+  display: inline-block;
+  margin: 20px;
+}
+
+.food-img {
+  background-image: url("../images/pizza.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.food-container:hover .food-img {
+  transform: scale(1.1);
+}
+
+.under-img {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.under-img-menu {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.test {
+  color: transparent;
+}
+
+.button {
+  text-align: right;
+  margin-right: 20vw;
+}
+
+.button-reservation {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-reservation:hover {
+  background-color: #e0b430;
+}
+
+.arrows {
+  color: white;
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.reservation-form {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.reservation-form p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.form-column-left,
+.form-column-right {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-row input,
+.form-row button {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.form-row button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-row button:hover {
+  background-color: #45a049;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video__media {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

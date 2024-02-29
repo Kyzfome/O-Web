@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link rel="stylesheet" href="static/styles/style.css" />
+  </head>
+  <body>
+    <div class="menu-theam">
+      <header>
+        <div class="nav-bar">
+          <ul>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/Старый+Йорк/@49.2227105,28.4228361,15z/data=!4m6!3m5!1s0x472d5c6fbab3b38b:0xadf848a89ecc205!8m2!3d49.2227105!4d28.4228361!16s%2Fg%2F1pp2txn42?entry=ttu"
+              >Map</a
+            >
+          </ul>
+        </div>
+      </header>
+      <div class="test">123</div>
+      <div class="menu-main-text">
+        <h1>Reservation</h1>
+      </div>
+    </div>
+    <div class="show-menu-text">
+      <h2>Fill out the reservation form</h2>
+      <p>
+        To book a table in our restaurant, fill out this form and send it to us.
+        Our managers will accept your reservation.
+      </p>
+    </div>
+    <div class="reservation-form">
+      <form action="#" method="post">
+        <div class="form-row">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" required />
+        </div>
+        <div class="form-row">
+          <label for="people">Number of people:</label>
+          <input type="number" id="people" name="people" required />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-row">
+          <button type="submit">Reserve</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
