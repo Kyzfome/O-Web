@@ -90,6 +90,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.nav-bar > ul > a:hover {
+  color: green;
+}
+
 .food {
   display: inline-block;
   text-align: center;
