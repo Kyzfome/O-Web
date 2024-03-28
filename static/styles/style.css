@@ -1,15 +1,18 @@
 body {
   margin: 0;
-  background-color: cornsilk;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-theam {
   background-image: url("../images/background.jpg");
   background-size: cover;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   background-repeat: no-repeat;
   background-position: center;
-  display: inline-block;
-  position: relative;
   height: 100vh;
 }
 
@@ -37,44 +40,83 @@ body {
   font-size: 30px;
 }
 
+.first-theam {
+  margin-top: 5vh;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.why-text {
+  text-align: center;
+  font-size: 42px;
+}
+
+.describe-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.grid {
+  display: grid;
+}
+
+.des-grid{
+  font-size: 21.5px;
+  padding: 0 15%;
+}
+
+.des-img {
+  display: flex;
+  position: relative;
+}
+
 .second-theam {
-  height: 80vh;
+  margin: 5vw 10vw;
+  height: 100vh;
 }
 
 .second-food-container {
-  background-color: rgba(0, 0, 0, 0.32);
-  max-width: 1400px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  background-color: rgba(255, 153, 0, 0.173);
   border-radius: 2%;
-  margin: 0 auto;
 }
 
 .second-main {
-  color: white;
+  color: rgb(0, 0, 0);
   position: relative;
   margin-top: 4vw;
-  text-align: center;
   font-size: 23px;
   font-family: "Times New Roman", Times, serif;
 }
 .under-second {
-  color: white;
+  color: rgb(0, 0, 0);
   position: relative;
   font-size: 2vw;
-  text-align: center;
 }
+
 .second-main > .p {
   color: white;
   margin: 0;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .nav-bar {
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0px;
   padding: 5px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
   text-align: right;
 }
 
@@ -103,30 +145,22 @@ body {
 }
 
 .food-index {
+  display: flex;
   text-align: center;
-  margin-top: 5vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
 }
 
 .main-text {
-  display: inline-block;
   color: white;
   font-weight: bold;
-  font-size: 5vw;
-  text-align: right;
-  margin-top: 4vw;
-  margin-right: 25px;
+  font-size: 50px;
 }
 
 .food-container {
-  display: inline-block;
   margin: 20px;
 }
 
 .menu-container {
   display: inline-block;
-  margin: 20px;
 }
 
 .food-img {
@@ -136,7 +170,6 @@ body {
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -145,7 +178,7 @@ body {
 }
 
 .under-img {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 30px;
   font-weight: bold;
@@ -163,12 +196,10 @@ body {
 }
 
 .button {
-  text-align: right;
-  margin-right: 20vw;
+  margin: 0;
 }
 
 .button-reservation {
-  display: inline-block;
   margin: 0;
   padding: 10px 20px;
   font-size: 35px;
