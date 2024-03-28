@@ -9,7 +9,7 @@ body {
   background-image: url("../images/background.jpg");
   background-size: cover;
   display: grid;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -150,6 +150,9 @@ body {
 }
 
 .main-text {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0 15%;
   color: white;
   font-weight: bold;
   font-size: 50px;
@@ -197,6 +200,7 @@ body {
 
 .button {
   margin: 0;
+  text-align: center;
 }
 
 .button-reservation {
