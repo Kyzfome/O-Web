@@ -8,16 +8,25 @@
   </head>
   <body>
     <div class="menu-theam">
-      <header>
+      <header class="header">
         <div class="nav-bar">
-          <ul>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="reservation.html">Reservation</a>
-            <a href="about.html">About us</a>
-            <a href="contact.html">Contact</a>
-            <a href="map.html">Map</a>
-          </ul>
+          <div id="menu" class="menu-list disp">
+            <ul>
+              <a href="index.html">Home</a>
+              <a href="menu.html">Menu</a>
+              <a href="reservation.html">Reservation</a>
+              <a href="about.html">About us</a>
+              <a href="contact.html">Contact</a>
+              <a href="map.html">Map</a>
+            </ul>
+          </div>
+          <div id="burger" class="menu-button">
+            <button class="burger-btn" aria-label="Меню">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </div>
         </div>
       </header>
       <div class="test">123</div>
@@ -68,5 +77,6 @@
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

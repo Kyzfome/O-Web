@@ -65,7 +65,7 @@ body {
   display: grid;
 }
 
-.des-grid{
+.des-grid {
   font-size: 21.5px;
   padding: 0 15%;
 }
@@ -115,16 +115,16 @@ body {
 
 .nav-bar {
   background-color: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   margin: 0px;
   padding: 5px;
   text-align: right;
 }
 
-.nav-bar > ul {
-  margin-right: 5vw;
-}
-
-.nav-bar > ul > a {
+.nav-bar .menu-list > ul > a {
   font-size: 25px;
   margin-right: 20px;
   color: rgb(255, 255, 255);
@@ -132,8 +132,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.nav-bar > ul > a:hover {
-  color: green;
+.nav-bar .menu-list > ul > a:hover {
+  color: rgb(255, 223, 15);
 }
 
 .food {
@@ -416,4 +416,54 @@ body {
 
 .contact-container a:hover {
   text-decoration: underline;
+}
+
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 45px;
+  height: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.burger-btn:hover .line {
+  background-color: rgb(255, 223, 15);
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+
+.menu-list {
+  animation: slideIn 0.5s forwards;
+}
+
+.disp {
+  animation: slideOut 0.5s forwards;
 }
