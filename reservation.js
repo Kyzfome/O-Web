@@ -1,23 +1,85 @@
-const form = document.querySelector(".reservation-form");
-const customerName = document.getElementById("name");
+document.addEventListener("DOMContentLoaded", async function () {
+  async function displayProducts() {
+    try {
+      const response = await fetch("http://localhost:3000/api/order/");
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const products = await response.json();
+      console.log("Products fetched successfully:", products);
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+      const productList = document.querySelector(".list-group");
+      productList.innerHTML = "";
 
-  const dateValue = date.value;
-  const timeValue = time.value;
-  const numPeopleValue = people.value;
-  const nameValue = customerName.value;
-  const emailValue = email.value;
-  const phoneValue = phone.value;
+      products.forEach((product) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("list-group-item");
+        listItem.textContent = `${product.name}: ${product.quantity}`;
 
-  const message = `You reserved:
-        Date: ${dateValue}
-        Time: ${timeValue}
-        Number of people: ${numPeopleValue}
-        Name: ${nameValue}
-        Email: ${emailValue}
-        Phone: ${phoneValue}`;
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Удалить";
+        deleteButton.classList.add("btn", "btn-danger", "btn-sm", "ml-2");
+        deleteButton.addEventListener("click", async () => {
+          try {
+            const deleteResponse = await fetch(
+              `http://localhost:3000/api/order/${product.id}`,
+              {
+                method: "DELETE",
+              }
+            );
 
-  alert(message);
+            if (!deleteResponse.ok) {
+              throw new Error("Failed to delete product");
+            }
+
+            console.log("Product deleted successfully");
+            displayProducts();
+          } catch (error) {
+            console.error(error.message);
+            console.log(product.id);
+          }
+        });
+
+        listItem.appendChild(deleteButton);
+        productList.appendChild(listItem);
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  displayProducts();
+
+  document
+    .getElementById("productForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const productName = document.getElementById("dishName").value;
+      const productQuantity = parseInt(
+        document.getElementById("quantity").value
+      );
+
+      try {
+        const response = await fetch("http://localhost:3000/api/order/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: productName,
+            quantity: productQuantity,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to add product");
+        }
+
+        console.log("Product added successfully");
+        displayProducts();
+      } catch (error) {
+        console.error(error.message);
+      }
+    });
 });
