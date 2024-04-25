@@ -35,7 +35,7 @@ body {
 }
 
 .show-menu-text {
-  margin-top: 5vw;
+  margin-top: 20px;
   text-align: center;
   font-size: 30px;
 }
@@ -167,13 +167,17 @@ body {
 }
 
 .food-img {
-  background-image: url("../images/pizza.jpg");
-  background-size: cover;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
   transition: transform 0.3s ease;
+}
+
+.food-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .food-container:hover .food-img {
@@ -470,4 +474,80 @@ body {
 
 .disp {
   animation: slideOut 0.5s forwards;
+}
+
+.form-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-product-container h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#productForm {
+  width: 100%;
+}
+
+#productForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#productForm input[type="text"],
+#productForm input[type="number"],
+#productForm button {
+  width: 97.5%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#productForm button {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#productForm button:hover {
+  background-color: #45a049;
+}
+
+#productForm input[type="text"]::placeholder,
+#productForm input[type="number"]::placeholder {
+  color: #999;
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  margin: 10px 0;
+  font-size: 24px;
+  background-color: #ffffff;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #28b55c;
+  border-radius: 5px;
 }

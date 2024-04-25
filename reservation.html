@@ -31,15 +31,15 @@
       </header>
       <div class="test">123</div>
       <div class="menu-main-text">
-        <h1>Order</h1>
+        <h1>Замовлення</h1>
       </div>
     </div>
     <div class="show-menu-text">
-      <h2>Fill out the order form</h2>
+      <h2>Заповніть форму</h2>
     </div>
 
-    <div class="container">
-      <h2>Форма для добавления блюд</h2>
+    <div class="form-product-container">
+      <h2>Форма замовлення</h2>
       <form id="productForm" class="container">
         <label class="sr-only" for="dishName">Назва страви</label>
         <input
@@ -56,10 +56,12 @@
           id="quantity"
           placeholder="Кількість"
         />
-
         <button type="submit" class="btn btn-primary mb-2">Додати</button>
       </form>
-      <ul class="list-group mt-4"></ul>
+      <div class="product-list">
+        <h2>Ваше замовлення</h2>
+        <ul class="list-group mt-4"></ul>
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="reservation.js"></script>

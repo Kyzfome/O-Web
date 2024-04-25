@@ -18,6 +18,6 @@ router.post("/", createProduct);
 
 router.post("/:id", updateProduct);
 
-router.post("/:id", deleteProduct);
+router.delete("/:id", deleteProduct);
 
 module.exports = router;

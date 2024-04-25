@@ -15,32 +15,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         const listItem = document.createElement("li");
         listItem.classList.add("list-group-item");
         listItem.textContent = `${product.name}: ${product.quantity}`;
-
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Удалить";
-        deleteButton.classList.add("btn", "btn-danger", "btn-sm", "ml-2");
-        deleteButton.addEventListener("click", async () => {
-          try {
-            const deleteResponse = await fetch(
-              `http://localhost:3000/api/order/${product.id}`,
-              {
-                method: "DELETE",
-              }
-            );
-
-            if (!deleteResponse.ok) {
-              throw new Error("Failed to delete product");
-            }
-
-            console.log("Product deleted successfully");
-            displayProducts();
-          } catch (error) {
-            console.error(error.message);
-            console.log(product.id);
-          }
-        });
-
-        listItem.appendChild(deleteButton);
         productList.appendChild(listItem);
       });
     } catch (error) {
@@ -77,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         console.log("Product added successfully");
+
         displayProducts();
       } catch (error) {
         console.error(error.message);

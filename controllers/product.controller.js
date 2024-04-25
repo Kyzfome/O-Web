@@ -56,7 +56,7 @@ const deleteProduct = async (req, res) => {
     }
 
     res.status(200).json(product);
-  } catch {
+  } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
