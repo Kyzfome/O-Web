@@ -344,8 +344,8 @@ body {
 }
 
 .video_about {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
@@ -359,10 +359,12 @@ body {
 }
 
 .video-container {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
-  margin: 5vh;
   max-width: 500px;
+  margin: 5vh;
+  height: 100%;
 }
 
 .map {
@@ -644,6 +646,22 @@ body {
   }
 
   .describe-flex {
+    flex-wrap: wrap;
+  }
+
+  .video-us {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .video-container {
+    width: 100%;
+  }
+  .video_about {
+    width: 250px;
+    height: 250px;
+  }
+  .contact {
+    display: flex;
     flex-wrap: wrap;
   }
 }
