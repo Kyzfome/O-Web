@@ -8,33 +8,13 @@ body {
 .main-theam {
   background-image: url("../images/background.jpg");
   background-size: cover;
-  display: grid;
-  justify-content: right;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-}
-
-@media (max-width: 768px) {
-  .main-theam {
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .nav-bar {
-    justify-content: center; /* Центрирование элементов навигации */
-    height: auto; /* Автоматическая высота, чтобы расширяться в зависимости от контента */
-    text-align: center; /* Центрирование текста */
-    background-color: rgba(0, 0, 0, 0.7); /* Изменение прозрачности фона */
-  }
-
-  .nav-bar .menu-list > ul > a {
-    font-size: 18px; /* Уменьшение размера шрифта */
-    margin: 0 10px; /* Уменьшение отступов между элементами */
-    display: block; /* Переход к вертикальному расположению элементов */
-  }
 }
 
 .menu-theam {
@@ -65,6 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   height: 100vh;
   background-size: cover;
+  flex-wrap: wrap;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -72,9 +53,9 @@ body {
 }
 
 .why-text {
-  text-align: center;
-  font-size: 42px;
   color: white;
+  text-align: center;
+  font-size: 30px;
 }
 
 .describe-flex {
@@ -90,13 +71,21 @@ body {
 }
 
 .des-grid {
+  grid-column-start: 1;
   font-size: 21.5px;
   padding: 0 15%;
 }
 
 .des-img {
+  grid-column-start: 2;
   display: flex;
-  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.des-img img {
+  max-width: 100%;
+  max-height: 1200px;
 }
 
 .second-theam {
@@ -133,8 +122,9 @@ body {
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 9999;
+  height: auto;
 }
 
 .nav-bar {
@@ -174,7 +164,6 @@ body {
 }
 
 .main-text {
-  margin-top: 100px;
   text-align: center;
   padding: 0 15%;
   color: white;
@@ -230,6 +219,7 @@ body {
 
 .button {
   margin: 0;
+  padding: 0 25%;
   text-align: center;
   transition: transform 0.2s ease-out;
 }
@@ -588,4 +578,72 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .main-theam {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-bar {
+    height: 60px;
+    text-align: center;
+  }
+
+  .nav-bar .menu-list > ul > a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  .main-text {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .button {
+    padding: 0 35px;
+  }
+
+  .button-reservation {
+    padding: 5px 20px;
+    font-size: 30px;
+  }
+
+  .nav-bar .menu-list > ul > a {
+    font-size: 20px;
+  }
+
+  .parallax {
+    height: 200vh;
+  }
+
+  .first-theam {
+    display: flex;
+    height: 200vh;
+  }
+
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .des-first {
+    align-items: flex-start;
+  }
+
+  .des-second {
+    align-items: flex-end;
+  }
+
+  .des-grid {
+    font-size: 20px;
+  }
+
+  .describe-flex {
+    flex-wrap: wrap;
+  }
 }
