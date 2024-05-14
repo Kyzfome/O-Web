@@ -16,6 +16,27 @@ body {
   height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .main-theam {
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-bar {
+    justify-content: center; /* Центрирование элементов навигации */
+    height: auto; /* Автоматическая высота, чтобы расширяться в зависимости от контента */
+    text-align: center; /* Центрирование текста */
+    background-color: rgba(0, 0, 0, 0.7); /* Изменение прозрачности фона */
+  }
+
+  .nav-bar .menu-list > ul > a {
+    font-size: 18px; /* Уменьшение размера шрифта */
+    margin: 0 10px; /* Уменьшение отступов между элементами */
+    display: block; /* Переход к вертикальному расположению элементов */
+  }
+}
+
 .menu-theam {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
