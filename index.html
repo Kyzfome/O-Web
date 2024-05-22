@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="static/styles/style.css" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+      rel="stylesheet"
+      href="static/styles/style.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="static/styles/style.css"
+    /></noscript>
   </head>
   <body>
     <header class="header">
@@ -32,10 +46,10 @@
       <div class="main-text" id="parallaxText">
         <h1>
           <pre>
-          Вітаємо
-          у нашому
-          ресторані!
-        </pre
+        Вітаємо
+        у нашому
+        ресторані!
+      </pre
           >
         </h1>
       </div>
@@ -48,7 +62,6 @@
         </button>
       </div>
     </div>
-
     <div class="parallax" id="parallax">
       <div class="first-theam">
         <div class="why-text"><h2>Чому обирають саме нас?</h2></div>
@@ -85,7 +98,12 @@
           </div>
           <div class="des-img">
             <img
-              src="https://thumb.tildacdn.com/tild3566-3131-4130-b464-373535323065/-/resize/560x/-/format/webp/noroot.png"
+              src="static/images/whyUS.webp"
+              srcset="
+                static/images/whyUS.webp 280w,
+                static/images/whyUS.webp 560w
+              "
+              sizes="(max-width: 1200px) 500px, 650px"
               alt="image"
               loading="lazy"
             />
@@ -93,7 +111,7 @@
         </div>
       </div>
     </div>
-    <script src="app.js" async></script>
-    <script src="parallax-app.js" async></script>
+    <script src="app.js" defer></script>
+    <script src="parallax-app.js" defer></script>
   </body>
 </html>
