@@ -7,7 +7,7 @@ body {
 }
 
 .main-theam {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/background.webp");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ body {
 .menu-theam {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-  background-image: url("../images/menu-background.jpg");
+  background-image: url("../images/menu-background.webp");
   background-size: cover;
   background-position: center;
   display: block;
@@ -573,7 +573,7 @@ body {
 }
 
 .parallax {
-  background-image: url("../images/parallax.jpg");
+  background-image: url("../images/parallax.webp");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
